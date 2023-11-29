@@ -1,0 +1,18 @@
+name: GitHub Docker Demo
+on:
+  push:
+    branches: [ main ]
+    paths-ignore: 
+      - .github/**
+      - hol/**
+  workflow_dispatch:
+
+jobs:
+  Builds:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.3.0
+      - name: Run Container
+        id: hello-action
+        uses: ./hello-world-docker-action
+
