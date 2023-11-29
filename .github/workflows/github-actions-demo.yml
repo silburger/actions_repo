@@ -16,6 +16,7 @@ jobs:
       - run: |
           echo "The job was triggered by: ${{ github.event_name }}"
           echo "The job was triggered on branch: ${{ github.ref_name }}" 
+      - uses: actions/checkout@v3.3.0
       - name: "List all files of repo:"
       - run: |
           tree
