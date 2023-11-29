@@ -1,0 +1,21 @@
+name: GitHub Actions Demo
+on:
+  push:
+    branches: [ main ]
+    paths-ignore: [.github/**]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '15 6 * * 0'
+  workflow_dispatch:
+
+jobs:
+  Builds:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "The job was triggered by: ${{ github.event_name }}"
+          echo "The job was triggered on branch: ${{ github.ref_name }}" 
+      - name: "List all files of repo:"
+      - run: |
+          tree
