@@ -1,4 +1,4 @@
-name: GitHub Docker Demo
+name: Hello World Docker CI
 on:
   push:
     branches: [ main ]
